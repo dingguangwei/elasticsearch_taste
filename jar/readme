@@ -1,0 +1,2 @@
+jar包里的weka包修改了Logistic，详情参考下面的项目： weka-src
+并且应该不能使用原来的weka-src作为源码，因为修改的部分，行号可能会跑偏

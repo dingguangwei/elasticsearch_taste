@@ -1,0 +1,21 @@
+grant {
+    permission javax.management.MBeanTrustPermission "register";
+    permission javax.management.MBeanServerPermission "createMBeanServer";
+	
+	
+	
+	// 表示文件名的时候要用双反斜杠，用-表示该文件夹下所有子目录
+	permission java.io.FilePermission "Capabilities.props", "read";
+	permission java.io.FilePermission "C:\\Users\\xiaochenchen\\-", "read,write";
+	permission java.util.PropertyPermission "*", "read,write";
+	
+	permission java.net.NetPermission "getProxySelector";
+	permission java.net.NetPermission "setDefaultAuthenticator";
+	
+	permission java.lang.RuntimePermission "getClassLoader";
+	permission java.lang.RuntimePermission "accessDeclaredMembers";
+	
+	permission java.lang.reflect.ReflectPermission "suppressAccessChecks";
+	
+	permission java.io.FilePermission "F:\\ESresult\\result.txt", "write";
+};
