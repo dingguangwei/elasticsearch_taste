@@ -29,7 +29,6 @@ import com.taste.elasticsearch_taste.common.TasteEventResponse;
 
 import ding.util.ESUtil.ActionParameter;
 import ding.util.OpUtil.Operate;
-import ding.util.WEKAUtil.WEKAbuilder;
 
 
 public class TasteEventRestAction extends BaseRestHandler{
@@ -49,7 +48,7 @@ public class TasteEventRestAction extends BaseRestHandler{
         }
         String action = request.param("action");
         if (action != null) {
-        	//logger.info("do something action");
+        	logger.info("do something action");
         	return createDoSomethingResponse(request, client);
         } else {  
         	logger.info("do Message action -- do anything without parameter( not used till now )");
@@ -61,7 +60,7 @@ public class TasteEventRestAction extends BaseRestHandler{
 	// 一、对应URL为 /_taste/{action}
 	private RestChannelConsumer createDoSomethingResponse(RestRequest request, NodeClient client){
 		this.parameter= new ActionParameter(request);
-		
+		System.out.println("createDoSomethingResponse: "+this.parameter.OperateCode+", "+this.parameter.Index+", "+this.parameter.From+", "+this.parameter.Size);
 		if(this.parameter.OperateCode.equals(ActionParameter.DoNothing_Code)){
 			logger.info("DoNothing -- Analyze & Predict");
 			return channel -> {

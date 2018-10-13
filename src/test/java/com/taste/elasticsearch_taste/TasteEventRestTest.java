@@ -30,7 +30,7 @@ public class TasteEventRestTest extends TastePluginTest {
 			// 预测
 			String s3 = "/_taste/parameter?op=32&index=iris-2&from=0&size=20&cAttr=classify&mRpath=C:/Users/xiaochenchen/Desktop/当前工作/result/J48.model";
 			
-			HttpGet get=new HttpGet(restBaseUrl + s3);
+			HttpGet get=new HttpGet(restBaseUrl + s1);
 			System.out.println("post请求已发送11111111111");
 			HttpResponse response = httpClient.execute(get);
 			System.out.println("post请求已发送");

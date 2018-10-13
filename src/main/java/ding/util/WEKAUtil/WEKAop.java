@@ -145,7 +145,7 @@ public class WEKAop {
 		cls.buildClassifier(instances);
 		
 		// serialize model
-		if(modelPath!=null){
+		if(modelPath!=null && modelPath.length()!=0){
 			weka.core.SerializationHelper.write(modelPath, cls);//"/some/where/j48.model"
 			System.out.println("存储训练模型："+modelPath);
 		}
