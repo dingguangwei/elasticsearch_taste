@@ -4,6 +4,7 @@ ding\util\WEKAUtil\WEKAbuilder.class
 ding\util\DrawUtil\HyperPlane.class
 com\taste\elasticsearch_taste\action\TasteEventAction.class
 com\taste\elasticsearch_taste\App.class
+ding\util\DrawUtil\drawScatterAndLine2D.class
 com\taste\elasticsearch_taste\action\TransportTasteEventAction$TransportHandler.class
 com\taste\elasticsearch_taste\rest\TasteEventRestAction$Message.class
 ding\util\ESUtil\ESData.class
@@ -11,6 +12,7 @@ com\taste\elasticsearch_taste\action\TransportTasteEventAction$TransportHandler$
 ding\util\DrawUtil\SingleIteratorPlane.class
 com\taste\elasticsearch_taste\action\TransportTasteEventAction.class
 com\taste\elasticsearch_taste\action\Preconditions.class
+ding\util\DrawUtil\drawScatterAndLine2D$1.class
 ding\util\WEKAUtil\WEKAresult.class
 ding\util\DrawUtil\MutliIteratorPlane.class
 ding\util\WEKAUtil\WEKAop.class
