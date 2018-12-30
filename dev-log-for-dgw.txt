@@ -1,0 +1,39 @@
+description=elasticsearch-taste-5.4.0.1 for Elasticsearch
+
+===================================================================================================================
+开发日志：
+-----------------------------------------------------------
+2018.3.28
+
+已经可以解析参数，并根据参数取出数据
+
+https://www.jianshu.com/p/257dcca702f7
+该博客讲了如何引用本地的jar包，现在已经可以使用weka的jar包了
+
+但是在使用过程中出现 
+Caused by: java.security.AccessControlException: access denied ("java.util.PropertyPermission" "*" "read,write")
+的问题，猜测可能是java或者es没有给weka足够的权限
+
+-----------------------------------------------------------
+2018.03.29
+首先：将昨天没有修改过的插件安装到软件版es中，获得插件文件夹，再复制粘贴到源码版的es中，添加weka的jar包依赖（一定要加入依赖，否则没办法运行）。
+出现错误：因为传入的数据有点问题，现准备做一个数据处理
+
+其次：maven中的weka包不能使用的问题，已经通过导入MOA包来解决。MOA是基于weka的，导入MOA包后自动导入了可用的weka包
+-----------------------------------------------------------
+2018.03.30
+28号出现的问题：
+Caused by: java.security.AccessControlException: access denied ("java.util.PropertyPermission" "*" "read,write")
+已经通过运行前在VM参数中添加-Djava.security.policy=policy/my.policy
+然后写了一个my.policy文件，给程序足够权限而解决
+现在程序已经可以跑weka的包了！！！
+
+详细解决方案参见我的博客：https://blog.csdn.net/qq_30141957/article/details/79795164
+
+-----------------------------------------------------------
+2018.04.02
+evalution 的 json格式，转化成功！（String类型的）
+
+-----------------------------------------------------------
+2018.04.11
+将String类型个json转化为builder类型，已经可以实现前端输出标准格式json
